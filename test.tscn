@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://easa4fgcl71e"]
+
+[ext_resource type="Script" path="res://test.gd" id="1_7o84g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jvmpg"]
+size = Vector2(1118.5, 213)
+
+[node name="Test" type="Node2D"]
+script = ExtResource("1_7o84g")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(585, 590)
+shape = SubResource("RectangleShape2D_jvmpg")
