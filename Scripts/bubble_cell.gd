@@ -12,6 +12,8 @@ var original_collision_radius
 var original_sprite_scale
 var original_xd
 
+var rescale_sound : AudioStream
+
 func _ready():
 	self_rigidbody = $RigidBody2D
 	self_sprite = $RigidBody2D/Sprite2D
@@ -21,6 +23,8 @@ func _ready():
 
 	original_sprite_scale = self_sprite.scale
 	self.rescale(1)
+
+	rescale_sound = load("res://Audios/SE_Marge.mp3")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -37,6 +41,8 @@ func rescale(size) -> void:
 	collision_shape.shape.radius = ((rescale_rate * 0.9) / 2).x # Scale the radius
 	xd.shape.radius = ((rescale_rate * 0.75) / 2).x
 	
+	MgrSfx.PlaySound(rescale_sound)
+
 func change_is_active():
 	is_active = !is_active
 	

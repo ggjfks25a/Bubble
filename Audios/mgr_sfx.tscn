@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cax16yw6jk207"]
+
+[ext_resource type="AudioStream" uid="uid://dy00bv7a7ek1a" path="res://Audios/SE_Break.mp3" id="1_f3vrh"]
+[ext_resource type="Script" path="res://Audios/MgrSfx.cs" id="2_65k6p"]
+
+[node name="MgrSfx" type="AudioStreamPlayer"]
+stream = ExtResource("1_f3vrh")
+script = ExtResource("2_65k6p")

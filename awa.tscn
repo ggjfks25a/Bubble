@@ -1,3 +1,4 @@
+<<<<<<< HEAD:awa.tscn
 [gd_scene load_steps=9 format=3 uid="uid://bcscpjjmcb801"]
 
 [ext_resource type="Script" path="res://awa.gd" id="1_jlx8t"]
@@ -7,6 +8,18 @@
 [ext_resource type="Texture2D" uid="uid://778kar482mvc" path="res://Sprites/snake.png" id="5_rylbh"]
 [ext_resource type="Script" path="res://Scripts/snake.gd" id="6_6eqwe"]
 [ext_resource type="PackedScene" uid="uid://chnw27ypcq7a3" path="res://ui.tscn" id="7_xjw6e"]
+=======
+[gd_scene load_steps=10 format=3 uid="uid://easa4fgcl71e"]
+
+[ext_resource type="Script" path="res://test.gd" id="1_7o84g"]
+[ext_resource type="Texture2D" uid="uid://cq52tbauafyav" path="res://Sprites/placeholder2.png" id="2_b7w3m"]
+[ext_resource type="Texture2D" uid="uid://d2n43j4xsu0uf" path="res://Sprites/hand.png" id="3_t0oa6"]
+[ext_resource type="Script" path="res://Scripts/hand.gd" id="4_r3v2t"]
+[ext_resource type="Script" path="res://Scripts/snake.gd" id="6_32smq"]
+[ext_resource type="Texture2D" uid="uid://778kar482mvc" path="res://Sprites/snake.png" id="6_85reh"]
+[ext_resource type="PackedScene" uid="uid://chnw27ypcq7a3" path="res://ui.tscn" id="7_bbbcq"]
+[ext_resource type="PackedScene" uid="uid://bhxg362f02apd" path="res://MainManager/MainGameManager.tscn" id="8_bgl1m"]
+>>>>>>> main:test.tscn
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jvmpg"]
 size = Vector2(1118.5, 569.5)
@@ -17,11 +30,11 @@ script = ExtResource("1_jlx8t")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(585, -142.75)
+position = Vector2(567, -202.75)
 shape = SubResource("RectangleShape2D_jvmpg")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(587.5, -138.5)
+position = Vector2(569.5, -198.5)
 scale = Vector2(4.66797, 2.76953)
 texture = ExtResource("2_dnqv3")
 
@@ -55,4 +68,11 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("5_rylbh")
 script = ExtResource("6_6eqwe")
 
+<<<<<<< HEAD:awa.tscn
 [node name="Ui" parent="." instance=ExtResource("7_xjw6e")]
+=======
+[node name="Ui" parent="." instance=ExtResource("7_bbbcq")]
+
+[node name="MainGameManager" parent="." node_paths=PackedStringArray("_bgLogo") instance=ExtResource("8_bgl1m")]
+_bgLogo = []
+>>>>>>> main:test.tscn
