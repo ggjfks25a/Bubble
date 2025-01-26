@@ -52,13 +52,12 @@ func calculate_adjacent_bubbles(parent_area, cummulated_areas):
 
 func _input_event(viewport, event, shape_idx):
 	if is_active:
-		if event.is_action_pressed("click") && GlobalData.attempts > 0:
+		if event.is_action_pressed("click"):
 			var areas = calculate_adjacent_bubbles(self, [])
 			for area in areas:
 				area.set_is_broken(true)
 			is_broken = true
 			var pollo = pow(2, get_parent().get_parent().level - 1) + (pow(2, areas.size()) - 1)
-			GlobalData.attempts -= 1
 			GlobalData.score += pollo
 			print("Score: ", GlobalData.score)
 			print("Attempts: ", GlobalData.attempts)

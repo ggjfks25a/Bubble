@@ -1,36 +1,89 @@
-[gd_scene load_steps=2 format=3 uid="uid://chnw27ypcq7a3"]
+[gd_scene load_steps=3 format=3 uid="uid://chnw27ypcq7a3"]
 
 [ext_resource type="Script" path="res://Scripts/ui.gd" id="1_v3yv1"]
+[ext_resource type="Texture2D" uid="uid://ckok7tcqoirgs" path="res://Sprites/Numbers/0.png" id="2_v13oc"]
 
 [node name="Ui" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+offset_left = 7.0
+offset_top = 14.0
+offset_right = 7.0
+offset_bottom = 14.0
 script = ExtResource("1_v3yv1")
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
+<<<<<<< HEAD
+offset_left = 972.0
+offset_top = 5.0
+offset_right = 1044.0
+offset_bottom = 28.0
+=======
 offset_left = 1.0
 offset_top = 23.0
 offset_right = 49.0
 offset_bottom = 46.0
+>>>>>>> main
 text = "Attempts"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
+offset_left = 15.0
+offset_right = 63.0
 offset_bottom = 23.0
-text = "Score:"
+text = "Score"
 
+<<<<<<< HEAD
+[node name="score1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 83.0
+=======
 [node name="score" type="Label" parent="."]
 layout_mode = 0
 offset_left = 85.0
+>>>>>>> main
 offset_top = 1.0
-offset_right = 133.0
-offset_bottom = 24.0
-text = "0
-"
-horizontal_alignment = 1
+offset_right = 116.0
+offset_bottom = 31.0
+texture = ExtResource("2_v13oc")
+expand_mode = 2
 
+<<<<<<< HEAD
+[node name="attempts2" type="TextureRect" parent="."]
+offset_left = 1087.0
+offset_top = 1.0
+offset_right = 1127.0
+offset_bottom = 36.0
+texture = ExtResource("2_v13oc")
+expand_mode = 2
+
+[node name="attempts1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1061.0
+offset_top = 1.0
+offset_right = 1101.0
+offset_bottom = 36.0
+texture = ExtResource("2_v13oc")
+expand_mode = 2
+
+[node name="score2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 1.0
+offset_right = 141.0
+offset_bottom = 31.0
+texture = ExtResource("2_v13oc")
+expand_mode = 2
+
+[node name="score3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 129.0
+offset_right = 167.0
+offset_bottom = 31.0
+texture = ExtResource("2_v13oc")
+expand_mode = 2
+=======
 [node name="attempts" type="Label" parent="."]
 layout_mode = 0
 offset_left = 84.0
@@ -40,3 +93,4 @@ offset_bottom = 46.0
 text = "0
 "
 horizontal_alignment = 1
+>>>>>>> main
