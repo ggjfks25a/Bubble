@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddrhfnh3lxpd6"]
+[gd_scene load_steps=9 format=3 uid="uid://ddrhfnh3lxpd6"]
 
 [ext_resource type="Script" path="res://Title/Title.cs" id="1_hsa07"]
 [ext_resource type="Texture2D" uid="uid://dko3xnm77lg3q" path="res://Title/Title_rogo.png" id="2_tfg0s"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dessqq5ahgllu" path="res://Sprites/Bubble/bubble_Green.png" id="4_u4ohn"]
 [ext_resource type="Texture2D" uid="uid://b1nhpgf80dxgm" path="res://Sprites/Bubble/bubble_Red.png" id="5_01ce3"]
 [ext_resource type="Texture2D" uid="uid://do0etbfcgvmfc" path="res://Sprites/Bubble/bubble_Yellow.png" id="6_riypv"]
+[ext_resource type="Texture2D" uid="uid://bybh2nfffe7kq" path="res://Title/info.png" id="8_k800j"]
 
 [node name="Title" type="Node2D" node_paths=PackedStringArray("_logo", "_fade", "_rule")]
 position = Vector2(576, 324)
@@ -80,7 +81,8 @@ texture = ExtResource("2_tfg0s")
 [node name="RuleBoard" type="Sprite2D" parent="."]
 visible = false
 z_index = 1
-texture = ExtResource("3_tkgk6")
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_k800j")
 
 [node name="Fade" type="Sprite2D" parent="."]
 z_index = 1000

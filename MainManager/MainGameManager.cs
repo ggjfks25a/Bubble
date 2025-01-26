@@ -10,12 +10,16 @@ public partial class MainGameManager : Node
 	[Export]Node2D[] _bgLogo;	// 背景を流れるロゴ 
 	double fadeTimer = 0.5;
 	
+	[Export]Sprite2D[] _ui;		// 爪楊枝UI
+	public int needleLimit = 5;
+	public int scoreNum    = 0;
+	
 	//--------------------------------------------------------------------------------
 	// 初期化 
 	//--------------------------------------------------------------------------------
 	public override void _Ready()
 	{
-			
+		
 	}
 
 	//--------------------------------------------------------------------------------
@@ -33,6 +37,12 @@ public partial class MainGameManager : Node
 			Color color = new Color(0,0,0,alpha);
 			_fade.Modulate = color;
 		}	
+		
+		// 残りのつまようじ個数 
+		for(int i=0; i<_ui.Length; i++)
+		{
+			//_ui[i].Visible = (i < needleLimit); 
+		}
 		
 		// 背景スクロール 
 		for(int i=0; i<_bgLogo.Length; i++)
