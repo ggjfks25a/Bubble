@@ -40,4 +40,5 @@ click={
 
 [rendering]
 
+environment/defaults/default_clear_color=Color(1, 1, 1, 1)
 textures/stretch/mode="disabled"

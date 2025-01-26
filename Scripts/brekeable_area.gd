@@ -29,6 +29,11 @@ func _process(delta: float) -> void:
 		timer1.start(0.025)
 		timer2.start(0.15)
 		
+		var break_sound = load('res://Audios/SE_Break.mp3')
+		var sound_player = get_node("..").get_node("..").get_node("AudioStreamPlayer2D")
+		sound_player.stream = break_sound
+		sound_player.play()
+		
 		# Perform actions with timers
 		var sprite = get_parent().get_node("Sprite2D")
 		sprite.scale *= 1.2

@@ -25,6 +25,8 @@ func _ready():
 	self.rescale(1)
 
 	rescale_sound = load("res://Audios/SE_Marge.mp3")
+	var soundPlayer = $AudioStreamPlayer2D
+	soundPlayer.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

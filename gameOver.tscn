@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d20rbndn14oad"]
+
+[ext_resource type="Texture2D" uid="uid://d1802ss0miwr7" path="res://Sprites/thanks.png" id="1_2qxfm"]
+[ext_resource type="Texture2D" uid="uid://778kar482mvc" path="res://Sprites/snake.png" id="2_o3wyc"]
+
+[node name="GameOver" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(560, 449)
+texture = ExtResource("1_2qxfm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(567, 238)
+texture = ExtResource("2_o3wyc")

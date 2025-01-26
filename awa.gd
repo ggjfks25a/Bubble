@@ -7,7 +7,6 @@ var red_cell : PackedScene
 var green_cell : PackedScene
 var yellow_cell : PackedScene
 
-var pop_sound : AudioStream
 var snake
 
 var is_locked = false
@@ -22,23 +21,15 @@ func _ready():
 	green_cell = load("res://Bubbles/greenCell.tscn")
 	yellow_cell = load("res://Bubbles/yellowCell.tscn")
 	
-	pop_sound = load("res://Audios/SE_Pop.mp3")
-	
 	snake = $Snake
 	print(snake)
 
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-<<<<<<< HEAD:awa.gd
 			if !breaker_mode && !is_locked && GlobalData.attempts > 0:
-=======
-				
-			if !breaker_mode && !is_locked:
->>>>>>> main:test.gd
 				var click_position = get_global_mouse_position()
 				spawn_object(click_position)
-				MgrSfx.PlaySound(pop_sound)		
 				is_locked = true
 				timer.one_shot = true
 				add_child(timer)
@@ -46,6 +37,8 @@ func _input(event):
 				await timer.timeout
 				is_locked = false
 				GlobalData.attempts -= 1
+			if GlobalData.attempts == 0 && get_child_count() < 6:
+				get_tree().change_scene_to_file("res://gameOver.tscn")
 
 		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			breaker_mode = !breaker_mode
