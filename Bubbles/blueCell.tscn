@@ -51,6 +51,7 @@ _data = {
 script = ExtResource("1_a75v6")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." groups=["blue", "bubble"]]
+gravity_scale = -1.0
 can_sleep = false
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
