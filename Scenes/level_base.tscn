@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dy1a1hx3r1s6t"]
+[gd_scene load_steps=5 format=3 uid="uid://dy1a1hx3r1s6t"]
 
 [ext_resource type="PackedScene" uid="uid://cj37x4q083870" path="res://Scenes/camera.tscn" id="1_3v343"]
 [ext_resource type="PackedScene" uid="uid://djnaplv741qb0" path="res://Players/player.tscn" id="2_mi6qc"]
+[ext_resource type="AudioStream" uid="uid://tqeiyxgjkyel" path="res://Audios/Shot.wav" id="3_knri6"]
 [ext_resource type="PackedScene" uid="uid://dba7pmupuchvq" path="res://Players/mgr_player.tscn" id="4_hfynb"]
 
 [node name="LevelBase" type="Node2D"]
@@ -9,6 +10,7 @@
 [node name="Camera" parent="." instance=ExtResource("1_3v343")]
 
 [node name="MgrPlayer" parent="." instance=ExtResource("4_hfynb")]
+setSfx = ExtResource("3_knri6")
 playerScene = ExtResource("2_mi6qc")
 
 [node name="Player" parent="MgrPlayer" instance=ExtResource("2_mi6qc")]
