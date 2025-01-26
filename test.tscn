@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://easa4fgcl71e"]
+[gd_scene load_steps=9 format=3 uid="uid://easa4fgcl71e"]
 
 [ext_resource type="Script" path="res://test.gd" id="1_7o84g"]
 [ext_resource type="Texture2D" uid="uid://cq52tbauafyav" path="res://Sprites/placeholder2.png" id="2_b7w3m"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scripts/hand.gd" id="4_r3v2t"]
 [ext_resource type="Script" path="res://Scripts/snake.gd" id="6_32smq"]
 [ext_resource type="Texture2D" uid="uid://778kar482mvc" path="res://Sprites/snake.png" id="6_85reh"]
+[ext_resource type="PackedScene" uid="uid://chnw27ypcq7a3" path="res://ui.tscn" id="7_bbbcq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jvmpg"]
 size = Vector2(1118.5, 569.5)
@@ -53,3 +54,5 @@ position = Vector2(1700, 816)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("6_85reh")
 script = ExtResource("6_32smq")
+
+[node name="Ui" parent="." instance=ExtResource("7_bbbcq")]
