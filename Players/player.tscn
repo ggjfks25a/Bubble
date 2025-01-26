@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://djnaplv741qb0"]
+
+[ext_resource type="Script" path="res://Players/Player.cs" id="1_h131a"]
+[ext_resource type="Texture2D" uid="uid://bje8mhaqgrqvh" path="res://Textures/Youzhi.png" id="1_wrl0l"]
+[ext_resource type="AudioStream" uid="uid://dy00bv7a7ek1a" path="res://Audios/SE_Break.mp3" id="2_5i13r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odi2i"]
+size = Vector2(31, 636)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_h131a")
+setSfx = ExtResource("2_5i13r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -3)
+shape = SubResource("RectangleShape2D_odi2i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wrl0l")

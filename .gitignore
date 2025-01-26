@@ -1,3 +1,41 @@
 # Godot 4+ specific ignores
 .godot/
+<<<<<<< HEAD
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_presets.cfg
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
+mono_crash.*.json
+.vs/GGJ2025V2/FileContentIndex/2ad79b7c-0090-4dd0-b3fb-be1e9b5eb300.vsidx
+.vs/GGJ2025V2/FileContentIndex/4fa62a05-61e6-408f-b40c-19efef003df9.vsidx
+.vs/GGJ2025V2/FileContentIndex/68263252-dba7-4862-990c-337defe49441.vsidx
+.vs/GGJ2025V2/FileContentIndex/28c56b43-08e7-4fd7-b263-7ba90c089035.vsidx
+.vs/GGJ2025V2/FileContentIndex/6317c661-32ea-49b4-983f-873d56ca2f4e.vsidx
+=======
 /android/
+>>>>>>> main
+.vs/GGJ2025V2/FileContentIndex/132a7dc7-b682-4ec2-9307-a64e52a0a9da.vsidx
+.vs/GGJ2025V2/FileContentIndex/79f8b1e6-6374-43f3-96c8-51fd295e9c70.vsidx
+.vs/GGJ2025V2/FileContentIndex/c78d9848-4d4d-4e94-b4e7-2eeda7397c55.vsidx
+.vs/GGJ2025V2/FileContentIndex/189afd70-5f9e-4898-bb6b-64bd9afc42bd.vsidx
+.vs/GGJ2025V2/FileContentIndex/33c08c3b-602f-4dfc-bbc7-9318a70cdfe6.vsidx
+.vs/GGJ2025V2/FileContentIndex/b18bc03c-fe11-4f84-9d39-0afac4b89f90.vsidx
+.vs/GGJ2025V2/FileContentIndex/252f79f2-b524-4f0e-8c43-1a02c54e6a73.vsidx
+.vs/GGJ2025V2/FileContentIndex/c1cb4179-2697-4883-838e-095e98e6b9ef.vsidx
+.vs/GGJ2025V2/FileContentIndex/c3e13f6c-e86d-41aa-abc0-e16232d3bac1.vsidx
+.vs/GGJ2025V2/FileContentIndex/b166242b-5133-4e71-9967-b7b34737c3d8.vsidx
+.vs/GGJ2025V2/FileContentIndex/26d47b62-c318-449b-b5ef-1d9f84325841.vsidx
+.vs/GGJ2025V2/FileContentIndex/dab9b7e5-ee20-47a6-90dc-e4ea83f3e9b6.vsidx
+.vs/GGJ2025V2/FileContentIndex/60821aff-efc1-4b7f-8fae-04e0b22824e3.vsidx
+.vs/GGJ2025V2/FileContentIndex/7db58f4b-771e-41af-89df-afbcba352092.vsidx
+.vs/GGJ2025V2/FileContentIndex/825e6bdc-4494-448c-a827-a3714f39f0b4.vsidx
+.vs/GGJ2025V2/FileContentIndex/18caf286-bf03-4f55-8e25-c7de6e3ceaf0.vsidx
+.vs/GGJ2025V2/FileContentIndex/25e24cd9-8f5a-4c5d-9495-c4c7b77b5ae7.vsidx

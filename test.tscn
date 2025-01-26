@@ -16,11 +16,11 @@ script = ExtResource("1_7o84g")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(585, -142.75)
+position = Vector2(585, 768.25)
 shape = SubResource("RectangleShape2D_jvmpg")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(587.5, -138.5)
+position = Vector2(587.5, 772.5)
 scale = Vector2(4.66797, 2.76953)
 texture = ExtResource("2_b7w3m")
 
