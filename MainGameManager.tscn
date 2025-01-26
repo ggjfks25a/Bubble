@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhxg362f02apd"]
+[gd_scene load_steps=4 format=3 uid="uid://bkl5q7olp0lix"]
 
 [ext_resource type="Script" path="res://MainGameManager.cs" id="1_mqb5a"]
 [ext_resource type="Texture2D" uid="uid://ysg3f6ghwo4a" path="res://Title/FadePanel.png" id="2_nu0qu"]

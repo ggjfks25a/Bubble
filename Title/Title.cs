@@ -96,6 +96,6 @@ public partial class Title : Node2D
 	//--------------------------------------------------------------------------------
 	void GoToMain()
 	{
-		GetTree().ChangeSceneToFile("res://MainScreen.tscn");
+		GetTree().ChangeSceneToFile("res://mainScreen.tscn");
 	}
 }
