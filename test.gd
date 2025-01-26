@@ -19,8 +19,9 @@ func _ready():
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			var click_position = get_global_mouse_position()
-			spawn_object(click_position)
+			if !breaker_mode:
+				var click_position = get_global_mouse_position()
+				spawn_object(click_position)
 			
 		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			breaker_mode = !breaker_mode
