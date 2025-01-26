@@ -34,7 +34,7 @@ func _input(event):
 
 func spawn_object(position: Vector2):
 	
-	var random_value = randi() % 4 + 1
+	var random_value = randi() % 3 + 1
 
 	# Instantiate the correct scene based on the random value
 	var cell_instance = null
