@@ -13,6 +13,7 @@ public partial class MgrPlayer : Node
         if (Input.IsActionJustPressed("ui_accept"))  // "ui_accept"はスペース
         {
             ShootYouzhi();
+
         }
     }
 
