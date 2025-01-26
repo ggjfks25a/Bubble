@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddrhfnh3lxpd6"]
+[gd_scene load_steps=9 format=3 uid="uid://ddrhfnh3lxpd6"]
 
 [ext_resource type="Script" path="res://Title/Title.cs" id="1_hsa07"]
 [ext_resource type="Texture2D" uid="uid://dko3xnm77lg3q" path="res://Title/Title_rogo.png" id="2_tfg0s"]
+[ext_resource type="Texture2D" uid="uid://cvy06vt5wmy" path="res://Sprites/Bubble/bubble_Blue.png" id="3_kr11f"]
 [ext_resource type="Texture2D" uid="uid://ysg3f6ghwo4a" path="res://Title/FadePanel.png" id="3_tkgk6"]
 [ext_resource type="AudioStream" uid="uid://ngcf4iti5g0y" path="res://Title/BGM_Main.mp3" id="4_ly3t1"]
+[ext_resource type="Texture2D" uid="uid://dessqq5ahgllu" path="res://Sprites/Bubble/bubble_Green.png" id="4_u4ohn"]
+[ext_resource type="Texture2D" uid="uid://b1nhpgf80dxgm" path="res://Sprites/Bubble/bubble_Red.png" id="5_01ce3"]
+[ext_resource type="Texture2D" uid="uid://do0etbfcgvmfc" path="res://Sprites/Bubble/bubble_Yellow.png" id="6_riypv"]
 
 [node name="Title" type="Node2D" node_paths=PackedStringArray("_logo", "_fade")]
 position = Vector2(576, 324)
@@ -16,6 +20,53 @@ modulate = Color(1, 0.905882, 1, 1)
 z_index = -1000
 texture = ExtResource("3_tkgk6")
 
+[node name="Node2D" type="Node2D" parent="Back"]
+position = Vector2(-64, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Back/Node2D"]
+modulate = Color(1, 1, 1, 0.752941)
+position = Vector2(-480, -256)
+texture = ExtResource("3_kr11f")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Back/Node2D"]
+modulate = Color(1, 1, 1, 0.752941)
+position = Vector2(-320, -330)
+texture = ExtResource("4_u4ohn")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Back/Node2D"]
+modulate = Color(1, 1, 1, 0.752941)
+position = Vector2(-150, -280)
+texture = ExtResource("5_01ce3")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Back/Node2D"]
+modulate = Color(1, 1, 1, 0.752941)
+position = Vector2(0, -360)
+texture = ExtResource("6_riypv")
+
+[node name="Node2D2" type="Node2D" parent="Back"]
+position = Vector2(64, 0)
+rotation = 3.14159
+
+[node name="Sprite2D" type="Sprite2D" parent="Back/Node2D2"]
+modulate = Color(1, 1, 1, 0.752941)
+position = Vector2(-480, -256)
+texture = ExtResource("5_01ce3")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Back/Node2D2"]
+modulate = Color(1, 1, 1, 0.752941)
+position = Vector2(-320, -330)
+texture = ExtResource("6_riypv")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Back/Node2D2"]
+modulate = Color(1, 1, 1, 0.752941)
+position = Vector2(-150, -280)
+texture = ExtResource("3_kr11f")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Back/Node2D2"]
+modulate = Color(1, 1, 1, 0.752941)
+position = Vector2(0, -360)
+texture = ExtResource("4_u4ohn")
+
 [node name="Logo" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
 texture = ExtResource("2_tfg0s")
@@ -26,13 +77,11 @@ z_index = -1
 position = Vector2(4, 4)
 texture = ExtResource("2_tfg0s")
 
-[node name="Fade" type="Sprite2D" parent="."]
-z_index = 1000
-texture = ExtResource("3_tkgk6")
-
-[node name="AudioListener2D" type="AudioListener2D" parent="."]
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="AudioListener2D"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_ly3t1")
 autoplay = true
 parameters/looping = true
+
+[node name="Fade" type="Sprite2D" parent="."]
+z_index = 1000
+texture = ExtResource("3_tkgk6")

@@ -2,35 +2,31 @@ using Godot;
 using System;
 
 //----------------------------------------------------------------------------------------------------
-// タイトル画面の管理  
+// タイトル画面の泡を制御する 
 //----------------------------------------------------------------------------------------------------
-public partial class Title : Node2D
+public partial class TitleBubble : Node
 {
-	[Export]Node2D   _logo;
-	[Export]Sprite2D _fade;
-	double timer = 1.5;
+	[Export]Sprite2D[] _sprites;
 	
 	//--------------------------------------------------------------------------------
-	// 初期化処理  
+	// 初期化 
 	//--------------------------------------------------------------------------------
 	public override void _Ready()
 	{
-		
+		// ランダムにひとつ選ぶ 
+		int rand = new Random().Next() % _sprites.Length;
+		GD.Print(rand);
+		for(int i=0; i<_sprites.Length; i++)
+		{
+			_sprites[i].Visible = (i==rand);
+		}
 	}
 
 	//--------------------------------------------------------------------------------
-	// 更新処理 
+	// 更新 
 	//--------------------------------------------------------------------------------
 	public override void _Process(double delta)
 	{
-		if(timer > 0)
-		{
-			timer -= delta;
-			float alpha = timer > 1 ? 1 : (float)timer;
-			Color color = new Color(0,0,0,alpha);
-			
-			_fade.Modulate = color;
-			if(timer < 0){ timer = 0; }
-		}
+		// 上に向かって移動 
 	}
 }
