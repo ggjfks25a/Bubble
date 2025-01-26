@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://djap5h18rejlr"]
+
+[ext_resource type="Script" path="res://Game/MgrEsc.cs" id="1_4gdje"]
+
+[node name="MgrEsc" type="Node"]
+script = ExtResource("1_4gdje")
