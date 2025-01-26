@@ -42,7 +42,7 @@ func change_is_active():
 	
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body != self_rigidbody && body.is_in_group("bubble") && body.get_groups() == self_rigidbody.get_groups() && level < 5 :
-		if body.get_parent().has_method("change_is_active") && is_active && body.get_parent().level <= self.level:
+		if body.get_parent().has_method("change_is_active") && is_active && body.get_parent().level == self.level:
 			body.get_parent().change_is_active()
 			body.get_parent().queue_free()
 			level += 1
