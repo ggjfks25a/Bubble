@@ -10,15 +10,11 @@ config_version=5
 
 [application]
 
-config/name="Buble"
-run/main_scene="res://Bubbles/blueCell.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/name="Bubble"
+run/main_scene="res://Title/title.tscn"
+config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
-[global_group]
+[dotnet]
 
-bubble=""
-blue=""
-red=""
-green=""
-yellow=""
+project/assembly_name="Bubble"
