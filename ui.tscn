@@ -13,6 +13,7 @@ offset_bottom = 14.0
 script = ExtResource("1_v3yv1")
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 1011.0
 offset_top = 4.0
 offset_right = 1083.0
