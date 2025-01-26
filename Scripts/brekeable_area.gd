@@ -57,6 +57,11 @@ func _input_event(viewport, event, shape_idx):
 			for area in areas:
 				area.set_is_broken(true)
 			is_broken = true
+			var pollo = pow(2, get_parent().get_parent().level - 1) + (pow(2, areas.size()) - 1)
+			GlobalData.attempts -= 1
+			GlobalData.score += pollo
+			print("Score: ", GlobalData.score)
+			print("Attempts: ", GlobalData.attempts)
 
 func _activate_breaker_mode(val):
 	is_active = val

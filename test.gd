@@ -66,6 +66,4 @@ func spawn_object(position: Vector2):
 			cell_instance = yellow_cell.instantiate()
 
 	cell_instance.position = Vector2(position.x, 580)  # Set its position
-	snake.position = Vector2(position.x, 580)
-	print(snake.position)
 	add_child(cell_instance)  # Add the new object to the scene
