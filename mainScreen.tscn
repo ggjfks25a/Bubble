@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://72mgj825rv2w"]
+[gd_scene load_steps=2 format=3 uid="uid://72mgj825rv2w"]
+
+[ext_resource type="Script" path="res://main_screen.gd" id="1_gcfdm"]
 
 [node name="MainScreen" type="Node2D"]
+script = ExtResource("1_gcfdm")
