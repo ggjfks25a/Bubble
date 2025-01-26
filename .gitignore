@@ -1,5 +1,6 @@
 # Godot 4+ specific ignores
 .godot/
+<<<<<<< HEAD
 
 # Godot-specific ignores
 .import/
@@ -18,3 +19,11 @@ mono_crash.*.json
 .vs/GGJ2025V2/FileContentIndex/68263252-dba7-4862-990c-337defe49441.vsidx
 .vs/GGJ2025V2/FileContentIndex/28c56b43-08e7-4fd7-b263-7ba90c089035.vsidx
 .vs/GGJ2025V2/FileContentIndex/6317c661-32ea-49b4-983f-873d56ca2f4e.vsidx
+=======
+/android/
+>>>>>>> main
+.vs/GGJ2025V2/FileContentIndex/132a7dc7-b682-4ec2-9307-a64e52a0a9da.vsidx
+.vs/GGJ2025V2/FileContentIndex/79f8b1e6-6374-43f3-96c8-51fd295e9c70.vsidx
+.vs/GGJ2025V2/FileContentIndex/c78d9848-4d4d-4e94-b4e7-2eeda7397c55.vsidx
+.vs/GGJ2025V2/FileContentIndex/189afd70-5f9e-4898-bb6b-64bd9afc42bd.vsidx
+.vs/GGJ2025V2/FileContentIndex/33c08c3b-602f-4dfc-bbc7-9318a70cdfe6.vsidx
