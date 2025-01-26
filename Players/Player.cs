@@ -8,16 +8,16 @@ public partial class Player : CharacterBody2D
 
     public override void _Ready()
     {
-        var audioPlayer = GetNode<AudioStreamPlayer>("MgrSfx");
+        //var audioPlayer = GetNode<AudioStreamPlayer>("MgrSfx");
 
-        if (audioPlayer == null)
-        {
-            GD.PrintErr("MgrSfx ノードが見つかりません");
-        }
-        else
-        {
-            audioPlayer.Play();
-        }
+        //if (audioPlayer == null)
+        //{
+        //    GD.PrintErr("MgrSfx ノードが見つかりません");
+        //}
+        //else
+        //{
+        //    audioPlayer.Play();
+        //}
 
     }
 
@@ -32,38 +32,4 @@ public partial class Player : CharacterBody2D
             QueueFree();  // 自分自身を削除
         }
     }
-
-    //   public override void _PhysicsProcess(double delta)
-    //{
-    //	Vector2 velocity = Velocity;
-
-    //	// Add the gravity.
-    //	if (!IsOnFloor())
-    //	{
-    //		velocity += GetGravity() * (float)delta;
-    //	}
-
-    //	// Handle Jump.
-    //	if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
-    //	{
-    //		velocity.Y = JumpVelocity;
-    //	}
-
-    //	// Get the input direction and handle the movement/deceleration.
-    //	// As good practice, you should replace UI actions with custom gameplay actions.
-    //	Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
-    //	if (direction != Vector2.Zero)
-    //	{
-    //		velocity.X = direction.X * Speed;
-    //	}
-    //	else
-    //	{
-    //		velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
-    //	}
-
-    //	Velocity = velocity;
-    //	MoveAndSlide();
-    //}
-
-
 }

@@ -3,10 +3,12 @@ using System;
 
 public partial class MgrPlayer : Node
 {
+    //音を鳴らす関数を作る
+
     public override void _Process(double delta)
     {
-        // Xキーが押された場合
-        if (Input.IsActionPressed("ui_accept"))  // "ui_accept" は Xキーにマッピングされていると仮定
+        // スペースが押された場合
+        if (Input.IsActionPressed("ui_accept"))  // "ui_accept"はスペース
         {
             ShootYouzhi();
         }

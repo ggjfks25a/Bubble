@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dy1a1hx3r1s6t"]
+[gd_scene load_steps=4 format=3 uid="uid://dy1a1hx3r1s6t"]
 
 [ext_resource type="PackedScene" uid="uid://cj37x4q083870" path="res://Scenes/camera.tscn" id="1_3v343"]
 [ext_resource type="PackedScene" uid="uid://djnaplv741qb0" path="res://Players/player.tscn" id="2_mi6qc"]
-[ext_resource type="PackedScene" uid="uid://o3341pl2u7cl" path="res://Audios/mgr_sfx.tscn" id="3_h4dih"]
 [ext_resource type="PackedScene" uid="uid://dba7pmupuchvq" path="res://Players/mgr_player.tscn" id="4_hfynb"]
 
 [node name="LevelBase" type="Node2D"]
@@ -15,5 +14,3 @@ playerScene = ExtResource("2_mi6qc")
 [node name="Player" parent="MgrPlayer" instance=ExtResource("2_mi6qc")]
 position = Vector2(0, 250)
 scale = Vector2(0.25, 0.25)
-
-[node name="MgrSfx" parent="MgrPlayer/Player" instance=ExtResource("3_h4dih")]

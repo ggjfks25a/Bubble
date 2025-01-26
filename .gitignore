@@ -1,3 +1,18 @@
 # Godot 4+ specific ignores
 .godot/
-/android/
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_presets.cfg
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
+mono_crash.*.json
+.vs/GGJ2025V2/FileContentIndex/2ad79b7c-0090-4dd0-b3fb-be1e9b5eb300.vsidx
+.vs/GGJ2025V2/FileContentIndex/4fa62a05-61e6-408f-b40c-19efef003df9.vsidx
+.vs/GGJ2025V2/FileContentIndex/68263252-dba7-4862-990c-337defe49441.vsidx
