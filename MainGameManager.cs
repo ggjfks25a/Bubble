@@ -50,8 +50,6 @@ public partial class MainGameManager : Node
 				pos.Y = 648;
 			}
 			_bgLogo[i].Position = pos;
-			
-			GD.Print(_bgLogo[i].Position );
 		}
 	}
 }

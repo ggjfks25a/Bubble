@@ -1,10 +1,15 @@
 extends Node2D
 
-# Declare the variable to store the prefab scene
+@onready var timer = Timer.new()
+
 var blue_cell : PackedScene
 var red_cell : PackedScene
 var green_cell : PackedScene
 var yellow_cell : PackedScene
+
+var snake
+
+var is_locked = false
 
 var attempts = 5
 
@@ -17,13 +22,23 @@ func _ready():
 	red_cell = load("res://Bubbles/redCell.tscn")
 	green_cell = load("res://Bubbles/greenCell.tscn")
 	yellow_cell = load("res://Bubbles/yellowCell.tscn")
+	
+	snake = $Snake
+	print(snake)
 
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			if !breaker_mode:
+			if !breaker_mode && !is_locked:
 				var click_position = get_global_mouse_position()
 				spawn_object(click_position)
+				is_locked = true
+				timer.one_shot = true
+				add_child(timer)
+				timer.start(0.15)
+				await timer.timeout
+				is_locked = false
+
 		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			breaker_mode = !breaker_mode
 			emit_signal("activate_breaker_mode", breaker_mode)
@@ -50,5 +65,7 @@ func spawn_object(position: Vector2):
 		4:
 			cell_instance = yellow_cell.instantiate()
 
-	cell_instance.position = position  # Set its position
+	cell_instance.position = Vector2(position.x, 580)  # Set its position
+	snake.position = Vector2(position.x, 580)
+	print(snake.position)
 	add_child(cell_instance)  # Add the new object to the scene
