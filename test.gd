@@ -20,8 +20,7 @@ func _input(event):
 			spawn_object(click_position)
 
 func spawn_object(position: Vector2):
-	# Instance the prefab and position it at the clicked position
-	# Generate a random number between 1 and 4
+	
 	var random_value = randi() % 4 + 1
 
 	# Instantiate the correct scene based on the random value

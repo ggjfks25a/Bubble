@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dessqq5ahgllu" path="res://Sprites/Bubble/bubble_Green.png" id="2_51nwg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2a81q"]
-radius = 32.9848
+radius = 24.0208
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_juof2"]
 radius = 44.0
@@ -52,7 +52,7 @@ script = ExtResource("1_bkfuh")
 [node name="RigidBody2D" type="RigidBody2D" parent="." groups=["bubble", "green"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
-scale = Vector2(0.277344, 0.277344)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_51nwg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
