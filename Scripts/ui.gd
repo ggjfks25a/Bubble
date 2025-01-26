@@ -1,6 +1,7 @@
 extends Control
 
-var attempts_label
+var attempts_digit1
+var attempts_digit2
 var score_digit1
 var score_digit2
 var score_digit3
@@ -24,7 +25,8 @@ func _ready() -> void:
 	score_digit1 = $score1
 	score_digit2 = $score2
 	score_digit3 = $score3
-	attempts_label = $attempts
+	attempts_digit1 = $attempts1
+	attempts_digit2 = $attempts2
 
 	update_display()  # Update the display initially
 
@@ -44,4 +46,8 @@ func update_display():
 	score_digit3.texture = digit_textures[int(score_str[2])]
 	
 	# Set the texture for attempts (assuming it should display the number as a texture)
-	attempts_label.texture = digit_textures[GlobalData.attempts]  # Ensure this is a valid index for textures
+	var attemps_str = str(GlobalData.attempts)
+	while attemps_str.length() < 2:  # Pad the score with leading zeros if necessary
+		attemps_str = "0" + attemps_str
+	attempts_digit1.texture = digit_textures[int(attemps_str[0])] 
+	attempts_digit2.texture = digit_textures[int(attemps_str[1])]

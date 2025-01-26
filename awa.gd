@@ -11,8 +11,6 @@ var snake
 
 var is_locked = false
 
-var attempts = 5
-
 var breaker_mode = false 
 signal activate_breaker_mode(val)
 
@@ -29,7 +27,7 @@ func _ready():
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			if !breaker_mode && !is_locked:
+			if !breaker_mode && !is_locked && GlobalData.attempts > 0:
 				var click_position = get_global_mouse_position()
 				spawn_object(click_position)
 				is_locked = true
@@ -38,6 +36,7 @@ func _input(event):
 				timer.start(0.15)
 				await timer.timeout
 				is_locked = false
+				GlobalData.attempts -= 1
 
 		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
 			breaker_mode = !breaker_mode

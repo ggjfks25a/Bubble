@@ -14,17 +14,18 @@ script = ExtResource("1_v3yv1")
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1011.0
-offset_top = 4.0
-offset_right = 1083.0
-offset_bottom = 27.0
+offset_left = 972.0
+offset_top = 5.0
+offset_right = 1044.0
+offset_bottom = 28.0
 text = "Attempts"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
+offset_left = 15.0
+offset_right = 63.0
 offset_bottom = 23.0
-text = "Score:"
+text = "Score"
 
 [node name="score1" type="TextureRect" parent="."]
 layout_mode = 0
@@ -35,11 +36,20 @@ offset_bottom = 31.0
 texture = ExtResource("2_v13oc")
 expand_mode = 2
 
-[node name="attempts" type="TextureRect" parent="."]
+[node name="attempts2" type="TextureRect" parent="."]
+offset_left = 1087.0
+offset_top = 1.0
+offset_right = 1127.0
+offset_bottom = 36.0
+texture = ExtResource("2_v13oc")
+expand_mode = 2
+
+[node name="attempts1" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 1100.0
-offset_right = 1140.0
-offset_bottom = 35.0
+offset_left = 1061.0
+offset_top = 1.0
+offset_right = 1101.0
+offset_bottom = 36.0
 texture = ExtResource("2_v13oc")
 expand_mode = 2
 
