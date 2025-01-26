@@ -6,6 +6,9 @@ var red_cell : PackedScene
 var green_cell : PackedScene
 var yellow_cell : PackedScene
 
+var breaker_mode = false 
+signal activate_breaker_mode(val)
+
 func _ready():
 	# Load the prefab scene
 	blue_cell = load("res://Bubbles/blueCell.tscn")
@@ -16,12 +19,22 @@ func _ready():
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			var click_position = get_global_mouse_position()
-			spawn_object(click_position)
+			if !breaker_mode:
+				var click_position = get_global_mouse_position()
+				spawn_object(click_position)
+			
+		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
+			breaker_mode = !breaker_mode
+			emit_signal("activate_breaker_mode", breaker_mode)
+			if breaker_mode:
+				Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+			else:
+				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	
 
 func spawn_object(position: Vector2):
 	
-	var random_value = randi() % 4 + 1
+	var random_value = randi() % 3 + 1
 
 	# Instantiate the correct scene based on the random value
 	var cell_instance = null

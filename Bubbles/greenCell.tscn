@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://lk126nqhr8of"]
+[gd_scene load_steps=9 format=3 uid="uid://lk126nqhr8of"]
 
 [ext_resource type="Script" path="res://Scripts/bubble_cell.gd" id="1_bkfuh"]
 [ext_resource type="Texture2D" uid="uid://dessqq5ahgllu" path="res://Sprites/Bubble/bubble_Green.png" id="2_51nwg"]
+[ext_resource type="Script" path="res://Scripts/brekeable_area.gd" id="3_s2q1u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2a81q"]
 radius = 24.0208
@@ -59,6 +60,7 @@ texture = ExtResource("2_51nwg")
 shape = SubResource("CircleShape2D_2a81q")
 
 [node name="Area2D" type="Area2D" parent="RigidBody2D"]
+script = ExtResource("3_s2q1u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/Area2D"]
 shape = SubResource("CircleShape2D_juof2")
