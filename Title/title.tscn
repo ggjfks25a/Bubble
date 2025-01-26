@@ -1,19 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://ddrhfnh3lxpd6"]
+[gd_scene load_steps=8 format=3 uid="uid://ddrhfnh3lxpd6"]
 
 [ext_resource type="Script" path="res://Title/Title.cs" id="1_hsa07"]
 [ext_resource type="Texture2D" uid="uid://dko3xnm77lg3q" path="res://Title/Title_rogo.png" id="2_tfg0s"]
 [ext_resource type="Texture2D" uid="uid://cvy06vt5wmy" path="res://Sprites/Bubble/bubble_Blue.png" id="3_kr11f"]
 [ext_resource type="Texture2D" uid="uid://ysg3f6ghwo4a" path="res://Title/FadePanel.png" id="3_tkgk6"]
-[ext_resource type="AudioStream" uid="uid://ngcf4iti5g0y" path="res://Title/BGM_Main.mp3" id="4_ly3t1"]
 [ext_resource type="Texture2D" uid="uid://dessqq5ahgllu" path="res://Sprites/Bubble/bubble_Green.png" id="4_u4ohn"]
 [ext_resource type="Texture2D" uid="uid://b1nhpgf80dxgm" path="res://Sprites/Bubble/bubble_Red.png" id="5_01ce3"]
 [ext_resource type="Texture2D" uid="uid://do0etbfcgvmfc" path="res://Sprites/Bubble/bubble_Yellow.png" id="6_riypv"]
 
-[node name="Title" type="Node2D" node_paths=PackedStringArray("_logo", "_fade")]
+[node name="Title" type="Node2D" node_paths=PackedStringArray("_logo", "_fade", "_rule")]
 position = Vector2(576, 324)
 script = ExtResource("1_hsa07")
 _logo = NodePath("Logo")
 _fade = NodePath("Fade")
+_rule = NodePath("RuleBoard")
 
 [node name="Back" type="Sprite2D" parent="."]
 modulate = Color(1, 0.905882, 1, 1)
@@ -77,10 +77,10 @@ z_index = -1
 position = Vector2(4, 4)
 texture = ExtResource("2_tfg0s")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_ly3t1")
-autoplay = true
-parameters/looping = true
+[node name="RuleBoard" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+texture = ExtResource("3_tkgk6")
 
 [node name="Fade" type="Sprite2D" parent="."]
 z_index = 1000
