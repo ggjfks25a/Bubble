@@ -52,7 +52,7 @@ func calculate_adjacent_bubbles(parent_area, cummulated_areas):
 
 func _input_event(viewport, event, shape_idx):
 	if is_active:
-		if event.is_action_pressed("click"):
+		if event.is_action_pressed("click") && GlobalData.attempts > 0:
 			var areas = calculate_adjacent_bubbles(self, [])
 			for area in areas:
 				area.set_is_broken(true)
