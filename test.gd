@@ -1,20 +1,12 @@
 extends Node2D
 
-@onready var timer = Timer.new()
-
+# Declare the variable to store the prefab scene
 var blue_cell : PackedScene
 var red_cell : PackedScene
 var green_cell : PackedScene
 var yellow_cell : PackedScene
 
-var snake
-
-var is_locked = false
-
-var attempts = 5
-
-var breaker_mode = false 
-signal activate_breaker_mode(val)
+var pop_sound : AudioStream
 
 func _ready():
 	# Load the prefab scene
@@ -23,31 +15,15 @@ func _ready():
 	green_cell = load("res://Bubbles/greenCell.tscn")
 	yellow_cell = load("res://Bubbles/yellowCell.tscn")
 	
-	snake = $Snake
-	print(snake)
-
+	pop_sound = load("res://Audios/SE_Pop.mp3")
+	
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			if !breaker_mode && !is_locked:
-				var click_position = get_global_mouse_position()
-				spawn_object(click_position)
-				is_locked = true
-				timer.one_shot = true
-				add_child(timer)
-				timer.start(0.15)
-				await timer.timeout
-				is_locked = false
-
-		if event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
-			breaker_mode = !breaker_mode
-			emit_signal("activate_breaker_mode", breaker_mode)
-			if breaker_mode:
-				Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-			else:
-				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	
-
+			var click_position = get_global_mouse_position()
+			spawn_object(click_position)
+			MgrSfx.PlaySound(pop_sound)		
+				
 func spawn_object(position: Vector2):
 	
 	var random_value = randi() % 4 + 1
@@ -65,7 +41,5 @@ func spawn_object(position: Vector2):
 		4:
 			cell_instance = yellow_cell.instantiate()
 
-	cell_instance.position = Vector2(position.x, 580)  # Set its position
-	snake.position = Vector2(position.x, 580)
-	print(snake.position)
+	cell_instance.position = position  # Set its position
 	add_child(cell_instance)  # Add the new object to the scene

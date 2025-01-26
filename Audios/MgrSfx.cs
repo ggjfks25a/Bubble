@@ -24,17 +24,17 @@ public partial class MgrSfx : AudioStreamPlayer
     {
         if (_instance == null)
         {
-            GD.PrintErr("SoundManager が初期化されていません！");
+            //GD.PrintErr("SoundManager が初期化されていません！");
             return;
         }
         if (_instance._mgrSfx == null)
         {
-            GD.PrintErr("_instance._mgrSfx == null");
+            //GD.PrintErr("_instance._mgrSfx == null");
             return;
         }
         if (sound == null)
         {
-            GD.PrintErr("再生するサウンドが設定されていません！");
+            //GD.PrintErr("再生するサウンドが設定されていません！");
             return;
         }
 

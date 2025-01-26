@@ -1,54 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Godot v4.3\\Godot_v4.3-stable_mono_win64\\ggj2025v2\\GitBubble\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9C4E44EE-3E10-4E12-8265-CB83DCA92DDF}|GGJ2025V2.csproj|c:\\godot v4.3\\godot_v4.3-stable_mono_win64\\ggj2025v2\\gitbubble\\players\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C4E44EE-3E10-4E12-8265-CB83DCA92DDF}|GGJ2025V2.csproj|solutionrelative:players\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C4E44EE-3E10-4E12-8265-CB83DCA92DDF}|GGJ2025V2.csproj|c:\\godot v4.3\\godot_v4.3-stable_mono_win64\\ggj2025v2\\gitbubble\\players\\mgrplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C4E44EE-3E10-4E12-8265-CB83DCA92DDF}|GGJ2025V2.csproj|solutionrelative:players\\mgrplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 182,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MgrPlayer.cs",
-              "DocumentMoniker": "C:\\Godot v4.3\\Godot_v4.3-stable_mono_win64\\ggj2025v2\\GitBubble\\Players\\MgrPlayer.cs",
-              "RelativeDocumentMoniker": "Players\\MgrPlayer.cs",
-              "ToolTip": "C:\\Godot v4.3\\Godot_v4.3-stable_mono_win64\\ggj2025v2\\GitBubble\\Players\\MgrPlayer.cs",
-              "RelativeToolTip": "Players\\MgrPlayer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T05:55:10.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Godot v4.3\\Godot_v4.3-stable_mono_win64\\ggj2025v2\\GitBubble\\Players\\Player.cs",
-              "RelativeDocumentMoniker": "Players\\Player.cs",
-              "ToolTip": "C:\\Godot v4.3\\Godot_v4.3-stable_mono_win64\\ggj2025v2\\GitBubble\\Players\\Player.cs",
-              "RelativeToolTip": "Players\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T04:03:48.27Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
